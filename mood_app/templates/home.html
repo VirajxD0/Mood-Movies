@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <title>Mood Movie Recommender</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1>Mood Movie Recommender</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <textarea
+        name="mood_text"
+        rows="4"
+        placeholder="How are you feeling today?"
+      ></textarea
+      ><br /><br />
+      <button type="submit">Get Recommendations</button>
+    </form>
+  </body>
+</html>
